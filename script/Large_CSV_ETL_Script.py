@@ -1,17 +1,17 @@
-import Script_large
+import Large_CSV_Load
 import pandas as pd
 import sqlite3
 import os
 import datetime as dt
 
 # fetch data from file
-data_file = Script_large.large_csv_file
+data_file = Large_CSV_Load.large_csv_file
 
 # fetch folder & files of db
 db_folder = 'H:\Python Prac\Py_Project\database'
 os.makedirs(db_folder, exist_ok=True)
 db_file = os.path.join(db_folder,'sales_data.db')
-print(f'Found the database file {db_file} to ingest data from {Script_large.large_csv_file}')
+print(f'Found the database file {db_file} to ingest data from {Large_CSV_Load.large_csv_file}')
 
 conn = sqlite3.connect(db_file)
 
